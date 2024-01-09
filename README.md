@@ -18,7 +18,7 @@ $ chmod u+x ./build.sh
 $ ./build.sh
 ```
 
-To install in `/usr/lcoal/bin`:
+To install in `/usr/local/bin`:
 ```bash
 $ cd ./build/
 $ sudo make install
@@ -48,7 +48,7 @@ $ gcc -Wall -Wextra -Werror random.c -o random
 
 ### Usage:
 
-+ Random Data-Points generator
+#### Random Data-Points generator
 ```bash
 $ random <max-value> <rows> <cols> <files...
 ```
@@ -59,7 +59,7 @@ Random data-points generator takes atleast 4 arguments.
 + cols : no. of columns
 + files... : files to save the data-points
 
-+ kmeans
+#### kmeans
 ```bash
 $ kmeans <clusters> <file>
 ```
@@ -80,3 +80,6 @@ individual lines. Unnecessary spaces and lines in file will produce bad clusters
 $ chmod u+x ./cmake_test.sh
 $ ./cmake_test.sh
 ```
+
+### Version:
+v1.1
