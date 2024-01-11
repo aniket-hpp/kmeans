@@ -38,13 +38,12 @@ void setup_matrix(){
     crash(matrix, "err: recieved null pointer in 'setup_matrix' function");
     logerr(NULL, "LOG: started setting up data-points from file to memory");
     int row_index = 0, col_index = 0; 
-    int muliplier = 1, buffer = 0;
+    int muliplier = 10, buffer = 0;
     char sign = 1;
 
     char ch;
     while(1){
         ch =  fgetc(fp);
-        
         switch(ch){
             case EOF: {
                 matrix[row_index].arr[col_index] = sign * buffer;
@@ -64,24 +63,23 @@ void setup_matrix(){
                 buffer = 0;
                 if(col_index >= cols) crash(NULL, "err: no of columns exceeded than initial columns");
                 sign = 1;
-                muliplier = 1;
+                muliplier = 10;
                 break;
             }
 
             case '\n': {
-                matrix[row_index++].arr[col_index] = sign * buffer;
+                matrix[row_index++].arr[col_index] = sign * buffer; 
                 buffer = 0;
                 if(row_index >= rows) crash(NULL, "err: no of rows exceeded than initial rows");
                 col_index = 0;
                 sign = 1;
-                muliplier = 1;
+                muliplier = 10;
                 break;
             }
 
             default:
                 if(!isdigit(ch)) crash(NULL, "err: unknown token rather than digit");
                 buffer = (buffer * muliplier) + (ch - 48);
-                muliplier *= 10;
        } 
     }
 }

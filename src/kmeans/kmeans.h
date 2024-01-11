@@ -178,6 +178,7 @@ void start_kmeans_clustering(){
     }
 
     // writing data to the 'output.txt'
+    print_final_cluster();
     write_data();
 }
 

@@ -82,4 +82,4 @@ $ ./cmake_test.sh
 ```
 
 ### Version:
-v1.1
+v1.2 : fixed parsing issue

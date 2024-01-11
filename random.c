@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
     srand(time(0));
 
     if(argc <= 4){
-        printf("usage: random <max-value> <count> <files....\n");
+        printf("usage: random <max-value> <rows> <cols> <files....\n");
         exit(1);
     }
 
